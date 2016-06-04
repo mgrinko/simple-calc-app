@@ -10,8 +10,6 @@ class Calc {
             this._buttons[i].onclick = this._onBtnClick.bind(this);
         }
         
-        this.onkeydown = this._onKeyboardClick.bind(this);
-
     }
 
 

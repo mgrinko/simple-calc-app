@@ -6,7 +6,7 @@ class Calc {
         this._screen = document.querySelector('.screen');
         this._buttons = document.querySelectorAll('.buttons');
 
-        for (var i = 0; i < this._buttons.length; i++) {
+        for (let i = 0; i < this._buttons.length; i++) {
             this._buttons[i].onclick = this._onBtnClick.bind(this);
         }
         
@@ -15,10 +15,10 @@ class Calc {
 
     _onBtnClick(event) {
 
-        var button = event.currentTarget.innerHTML;
+        let button = event.currentTarget.innerHTML;
         console.log(button);
-        var operators = ['+', '-', 'x', '÷', '.', '+'];
-        var lastChar = this._screen.innerHTML[this._screen.innerHTML.length - 1];
+        let operators = ['+', '-', 'x', '÷', '.', '+'];
+        let lastChar = this._screen.innerHTML[this._screen.innerHTML.length - 1];
 
         if (button == 'c') {
             this._screen.innerHTML = '';
@@ -45,7 +45,7 @@ class Calc {
             return true;
         }
 
-        if (operators.indexOf(button) || button == '+') {
+        if (operators.indexOf(button) || button == '+') { // + Bugfix
             if (!isNaN(lastChar)) {
                 this._screen.innerHTML += button;
             }

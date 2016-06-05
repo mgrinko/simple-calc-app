@@ -1,41 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Simple Calculator App</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
     <div id="calculator">
-	        <!-- screen  -->
-		    <div class="screen" id='value'></div>
-	
+
+        <!-- screen  -->
+        <div class="screen" id='value'></div>
+
         <!-- buttons  -->
-	    <div class="keys">
-            <div class="clear operators buttons">c</div>
-            <div class="minus-plus operators buttons">+/-</div>
-            <div class="percent operators buttons">÷</div>
-            <div class="division operators buttons" onclick="<style>.history{visibility: visible;}</style>"></div>
+        <div class="keys">
+            <span class="clear operators buttons" id="c">c</span>
+            <span class="buttons">+/-</span>
+            <span class="buttons">÷</span>
+            <span class="buttons">←</span>
             <span class="buttons">7</span>
             <span class="buttons">8</span>
             <span class="buttons">9</span>
-            <div class="multiply operators buttons">x</div>
+            <span class="buttons">x</span>
             <span class="buttons">4</span>
             <span class="buttons">5</span>
             <span class="buttons">6</span>
-            <div class="minus operators buttons">-</div>
+            <span class="buttons">-</span>
             <span class="buttons">1</span>
             <span class="buttons">2</span>
             <span class="buttons">3</span>
-            <div class="plus operators buttons">+</div>
+            <span class="buttons plus">+</span>
             <span class="buttons">0</span>
             <span class="buttons">.</span>
-            <div class="eval operators buttons">=</div>
+            <span class="buttons">=</span>
         </div>
-        
-        <div class="history"></div>
-</div>
 
-<script type="text/javascript" src="calc.js"></script>
+    </div>
+
+    <audio id="buttonclick" src="button.mp3"></audio>
+    <script type="text/javascript" src="calc.js"></script>
+
 </body>
+
 </html>
